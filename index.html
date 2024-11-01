@@ -8,12 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rye&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
 </head>
 <body>
     <section class="header">
         <nav>
-            <a href="index.html"><img src="images/2.png"></a>
-            <div class="nav-links">
+            <a href="index.html"><img src="images/2.png" width="20px"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="">HOME</a></li>
                     <li><a href="">ABOUT</a></li>
@@ -22,6 +24,7 @@
                     <li><a href="">CONTACT</a></li>
                 </ul>
             </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
         </nav>
         <div class="text-box">
             <h1>World's Biggest University</h1>
@@ -29,5 +32,14 @@
             <a href="" class="hero-btn">Visit us to know more</a>
         </div>
     </section>
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px";
+        }
+    </script>
 </body>
 </html>
